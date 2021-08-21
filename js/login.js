@@ -1,6 +1,6 @@
-//Función que se ejecuta una vez que se haya lanzado el evento de
-//que el documento se encuentra cargado, es decir, se encuentran todos los
-//elementos HTML presentes.
-document.addEventListener("DOMContentLoaded", function(e){
-
-});
+let userName = document.getElementById("nombre")
+let password = document.getElementById("password")
+function logIn (userName,password){
+    if(!(userName=="")||(password=="")){
+        return("Ese usuario o contraseña son erroneos. Intentelo de nuevo.")
+    }}
