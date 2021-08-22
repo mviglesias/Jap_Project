@@ -1,3 +1,4 @@
+//  consguir info
  var getJSONData = function(){
     var result = {};
     return fetch("https://japdevdep.github.io/ecommerce-api/product/all.json")
@@ -19,6 +20,7 @@
         return result;
     });
 }
+// hacer muestra de productos en el body
 var productsArray = [];
 
 function showProductsList(array){
