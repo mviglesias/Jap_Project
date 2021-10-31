@@ -22,15 +22,67 @@
         <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
         <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
         <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-        <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
+        <a  id="perfil" class="nav-link dropdown-toggle btn btn-outline-info" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="cart.html">Mi carrito</a></li>
+            <li><a class="dropdown-item" href="my-profile.html">Mi perfil</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="index.html" onclick="logoff()">Cerrar sesion</a></li>
+          </ul>
+      
       </div>
     </nav>
-    
+    <!-- Filtros -->
+   <br>
+   <div class="container-fluid">
+    <div class="row">
+        <div class="col">
+          <h5>Ordenar productos</h5>
+            <div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
+                <label class="btn btn-light active" id="sortAsc" >
+                    <input type="radio" name="options" autocomplete="off" checked>Menor costo
+                </label>
+                <label class="btn btn-light" id="sortDesc" >
+                    <input type="radio" name="options" autocomplete="off">Mayor costo
+                </label>
+                <label class="btn btn-light" id="sortByCount" >
+                    <input type="radio" name="options" autocomplete="off"><i class="fas fa-sort-amount-down mr-1"></i>Más populares..
+                </label>
+            </div>
+            <div class="col"></div>
+            
+        </div>
+    </div>
+    <div id="contador" class="container">
+       
+          <div class="row container p-0 m-0">
+            <div class="col">
+              <p class="font-weight-normal text-right my-2">Defina precio.</p>
+            </div>
+            <div class="col">
+              <input class="form-control" type="number" placeholder="min." id="rangeFilterCountMin">
+            </div>
+            <div class="col">
+              <input class="form-control" type="number" placeholder="máx." id="rangeFilterCountMax">
+            </div>
+            
+            <div class="col-3 p-0">
+              <div class="btn-group" role="group">
+                <button class="btn btn-light btn-block" id="rangeFilterCount">Filtrar</button>
+                <button class="btn btn-link btn-sm" id="clearRangeFilter">Limpiar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  
     <!-- contenido -->
-    <div class="container p-5">
+    <div class="container-fluid">
       <h2 style= "text-align: center; font-weight: 900";>Los mejores productos en e-commerce </h2>
       <br>
-        <div id="productos">
+        <div class= "album py-5 bg-light" style="align-items: center;" >
+          <div class="row"; id="productos" >
       </div>
     </div>
 
@@ -44,10 +96,14 @@
         <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
       </div>
     </footer>
-    <div id="spinner-wrapper"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>
+
+    <div id="spinner-wrapper"><div class="lds-ring"><div>
+
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/init.js"></script>
     <script src="js/products.js"></script>
+    <script src="js/login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
   </body>
 </html>

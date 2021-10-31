@@ -13,6 +13,7 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -22,17 +23,91 @@
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-      <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
+      <a  id="perfil" class="nav-link dropdown-toggle btn btn-outline-info" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="cart.html">Mi carrito</a></li>
+          <li><a class="dropdown-item" href="my-profile.html">Mi perfil</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="index.html" onclick="logoff()">Cerrar sesion</a></li>
+        </ul>
+    
     </div>
   </nav>
+  <!-- contenido -->
   <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 3 (Fecha de entrega: 19/09/2021) y Entrega 4 (Fecha de entrega: 03/10/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+    <div class="text-center p-4">
+      <h2 id="productName"></h2>
     </div>
+    <hr class="my-3">
+    <dl>
+      <dt>Descripción</dt>
+      <dd>
+        <p id="productDescription"></p>
+      </dd>
+
+      <dd>
+        <p id="productsoldCount"></p>
+      </dd>
+
+      <dt>Precio</dt>
+      <dd>
+        <p id="productcost"></p>
+      </dd>
+      <dt>Este producto pertenece a la categoría</dt>
+      <dd>
+        <p id="pcategoria"></p>
+      </dd>
+      <dt>Fotos del producto</dt>
+      <div id="demo" class="carousel slide" data-ride="carousel">
+
+      
+        <!-- The slideshow -->
+        <div class="carousel-inner" id="imgpro">
+        </div>
+      
+        <!--controles -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      
+      </div>
+      <!-- recomedados -->
+      <br>
+      <dt>Productos relacionados</dt>
+        <div id="recomendado"class="row">
+        </div>
+      </div>
+      </div>
+    <br>
+    <!-- comentarios -->
+      <div id="comentarios" class="text-center p-4">
+        <p id="score"></p>
+      </div>
+      <div class="container p-md-5" id="agregar_comentarios">
+        <div>
+          <div class="rating">
+            <span class="calificar far fa-star" value="1"></span>
+            <span class="calificar far fa-star" value="2"></span>
+            <span class="calificar far fa-star" value="3"></span>
+            <span class="calificar far fa-star" value="4"></span>
+            <span class="calificar far fa-star" value="5"></span>
+      </div>
+      <br>
+      <h6 style="font-weight: bold;">Cuentanos tu experiencia</h6>
+            <input id="nc" type="text" class="form-control" placeholder="Nos interesa tu opinión" aria-label="" aria-describedby="basic-addon1" valu="">
+            <br>
+            <button class="btn btn-info" type="submit" value="" onclick="agregarComment()">Enviar</button> 
+          </div>
+          
+    </dl>
+    
   </div>
+</main>
+
   <footer class="text-muted">
     <div class="container">
       <p class="float-right">
@@ -41,7 +116,6 @@
       <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
       <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
     </div>
-  </footer>
   <div id="spinner-wrapper">
     <div class="lds-ring">
       <div></div>
@@ -54,6 +128,9 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/product-info.js"></script>
+  <script src="js/login.js"></script>
+ <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>
 
 </html>

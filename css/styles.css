@@ -144,3 +144,21 @@ a.custom-card:hover {
 font-size: larger;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+.rating {
+  width: 200px;
+}
+
+.calificar {
+  cursor: pointer;
+  color: #f5d000fa;
+}
+
+#agregar_comentarios{
+background-color: rgba(202, 221, 243, 0.98);
+}
+.cantidad {
+  width: 50px;
+  border-style: 0;
+
+}

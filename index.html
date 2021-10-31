@@ -46,12 +46,12 @@
         <h2>¡Nos alegra volver a verte!</h2>
       </div>
       <br>
-      <form action="home.html">
-        <label for="Nombre" id="nombre"> Nombre de usuario <input type="text" name="name" required></label>
+      <form action="home.html" onsubmit="userStorage()">
+        <label for="Nombre"> Nombre de usuario <input type="text" id="nombreU"  name="name" required></label>
         <br>
         <label for="password" id="password"> Contraseña <input type="password" name="password" required></label>
         <br>
-     <input type="submit" class="btn btn-primary"value="Ingresar">
+        <button id="Ingresar" type="submit" class="btn btn-primary">Ingresar</button>
      </form>
     </div>
   </div>

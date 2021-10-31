@@ -39,6 +39,15 @@ var getJSONData = function(url){
         return result;
     });
 }
+let UnavName = localStorage.getItem("nombre");
+function redi (){
+  if (UnavName == null) {
+ location.href = "index.html"
+  }
+}
+function logoff() {
+  localStorage.removeItem("nombre")
+}
 
 //Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los
